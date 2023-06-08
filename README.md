@@ -1,6 +1,6 @@
-Implementaciones:
-
-- Base de datos local SQFL
-- Lector de QR (facilmente cambiable a codigos de barras, etc...)
-- Lanzador de paginas web.
-- Provider como gestor del estado y de la base de datos.
+# QrScannerApp
+Implementaciones: 
+  - Base de datos local SQFL
+  - Lector de QR (facilmente cambiable a codigos de barras, etc...)
+  - Lanzador de paginas web.
+  - Provider como gestor del estado y de la base de datos.
