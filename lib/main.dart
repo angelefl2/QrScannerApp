@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
           "mapa": ((_) => MapaPage()),
         },
         theme: ThemeData(
-          primaryColor: Colors.deepPurple,
+          primaryColor: Colors.blueAccent,
           floatingActionButtonTheme: const FloatingActionButtonThemeData(
-              backgroundColor: Colors.deepPurple),
+              backgroundColor: Colors.blueAccent),
         ),
       ),
     );

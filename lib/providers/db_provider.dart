@@ -25,7 +25,6 @@ class DBProvider {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     // Join se usa para unir la ruta de documentos de la app al nombre de la base de datos
     final path = join(documentsDirectory.path, "ScansDB.db");
-    print("La ruta de labase de datos: $path");
     return await openDatabase(
       path,
       version:
@@ -116,9 +115,17 @@ class DBProvider {
   Future<int> deleteAllScans() async {
     final db = await database;
     //final res = await db.delete("Scans");
-    // Tambien se puede haer asi 
+    // Tambien se puede haer asi
     final res = await db.rawDelete('''
     DELETE FROM Scans
+    ''');
+    return res;
+  }
+
+  Future<int> deleteScansPorTipo(String tipo) async {
+    final db = await database;
+    final res = await db.rawDelete('''
+    DELETE FROM Scans WHERE tipo = "$tipo";
     ''');
     return res;
   }
