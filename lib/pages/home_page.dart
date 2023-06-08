@@ -21,8 +21,6 @@ class HomePage extends StatelessWidget {
               final uiProvider =
                   Provider.of<UiProvider>(context, listen: false);
               final currentIndex = uiProvider.selectedMenuOpt;
-
-              print(currentIndex);
               if (currentIndex == 0) {
                 scanListProvider.borrarScanPorTipo("geo");
               } else {
